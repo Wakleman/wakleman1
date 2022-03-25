@@ -182,7 +182,7 @@ touch /etc/v2ray/domain
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 echo "$host" >> /root/domain
-echo "V1.0" >> /home/version
+echo "PAKYAVPN(v1)" >> /home/version
 clear
 #Domain
 wget https://raw.githubusercontent.com/wakleman/wakleman1/main/addon/cf.sh
