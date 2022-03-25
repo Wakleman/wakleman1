@@ -1,5 +1,9 @@
 #!/bin/bash
 #Menu
+Lred='\e[1;91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
+white='\e[1;37m'
 green='\e[32m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -53,6 +57,15 @@ tele=$(cat /home/contact)
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 name=$(curl -sS https://raw.githubusercontent.com/wakleman/ip/main/access | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/wakleman/ip/main/access | grep $IPVPS | awk '{print $3}')
+modifyTime1=$(date +%s -d "${exp}")
+currentTime=$(date +%s)
+stampDiff=$(expr ${currentTime} - ${modifyTime1})
+days=$(expr ${stampDiff} / 86400)
+remainingDays=$(expr 90 - ${days})
+remain=${remainingDays}
+if [[ ${remainingDays} -le 0 ]]; then
+	remain="expired"
+fi
 clear
 echo -e ""
 echo -e "$RED ████████╗██████╗░██╗░█████╗░██╗░░██╗░██████╗ $NC"
@@ -62,9 +75,9 @@ echo -e "$RED ░░░██║░░░██╔══██╗██║██
 echo -e "$RED ░░░██║░░░██║░░██║██║╚█████╔╝██║░╚██╗██████╔╝ $NC"
 echo -e "$RED ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░ $NC"
 echo -e "$green Premium Script$NC"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                      SERVER INFORMATION                    ${NC}"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$green CPU Model            :$cname"$NC
 echo -e "$green CPU Frequency        :$freq MHz"$NC
 echo -e "$green Number Of Cores      :$cores"$NC
@@ -83,26 +96,27 @@ echo -e "$green IP VPS               :$IPVPS"$NC
 echo -e "$green DOMAIN               :$domain"$NC
 echo -e "$green City                 :$CITY"$NC
 echo -e "$green SERVER               :$ISP"$NC
-echo -e "$green Client Name          :$name${NC}"
-echo -e "$green Expired Date         :$exp${NC}"
+echo -e "$green Client Name          :$name"$NC
+echo -e "$green Expired On           :$exp"$NC
+echo -e "$green Expired In           :$remain Days"$NC
 echo -e "$green Provided By          :@anakjati567"$NC
 echo -e "$green Script Version       :$Sver"$NC
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                        MAIN MENU                           ${NC}"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "$green (•1) $NC PANEL SSH & OPENVPN"
-echo -e "$green (•2) $NC PANEL L2TP, PPTP, SSTP"
-echo -e "$green (•3) $NC PANEL WIREGUARDS"
-echo -e "$green (•4) $NC PANEL SS & SSR"
-echo -e "$green (•5) $NC PANEL XRAY CORE"
-echo -e "$green (•6) $NC PANEL V2RAY CORE"
-echo -e "$green (•7) $NC PANEL ALL TRIAL"
-echo -e "$green (•8) $NC SYSTEM MENU"
-echo -e "$green (•9) $NC CHECK RUNNING SC"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e " Premium VPS by @anakjati567"
-echo -e " Thank you for using script by PAKYAVPN"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
+echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
+echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP"$NC
+echo -e "$PURPLE (•3) $NC $green PANEL WIREGUARDS"$NC
+echo -e "$PURPLE (•4) $NC $green PANEL SS & SSR "$NC
+echo -e "$PURPLE (•5) $NC $green PANEL XRAY CORE "$NC
+echo -e "$PURPLE (•6) $NC $green PANEL V2RAY CORE "$NC
+echo -e "$PURPLE (•7) $NC $green ALL TRIAL"$NC
+echo -e "$PURPLE (•8) $NC $green SYSTEM MENU"$NC
+echo -e "$PURPLE (•9) $NC $green CHECK RUNNING SC"$NC
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
+echo -e "$Lyellow Premium VPS by @anakjati567"$NC
+echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 echo -e "[Ctrl + C] For exit from main menu"
 echo -e ""
