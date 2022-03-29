@@ -191,7 +191,6 @@ echo -e "$green IP VPS               :$IPVPS"$NC
 echo -e "$green DOMAIN               :$domain"$NC
 echo -e "$green City                 :$CITY"$NC
 echo -e "$green SERVER               :$ISP"$NC
-echo -e "$green Username             :$username $NC"
 echo -e "$green Client Name          :$name"$NC
 echo -e "$green Expired On           :$exp"$NC
 echo -e "$green Expired In           :$remain Days"$NC
