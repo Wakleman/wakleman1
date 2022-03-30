@@ -125,7 +125,8 @@ echo -e "${ORANGE}=============================================${NC}"
 sleep 1
 echo start
 sleep 0.5
-domain=$(cat /etc/v2ray/domain)
+source /var/lib/premium-script/ipvps.conf
+domain=$IP
 systemctl stop v2ray
 systemctl stop v2ray@none
 systemctl stop v2ray@vless.service
@@ -133,26 +134,21 @@ systemctl stop v2ray@vnone.service
 systemctl stop trojan
 systemctl stop xray-mini@vless-direct
 systemctl stop xray-mini@vless-splice
-cd /root/
-wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
-bash acme.sh --install
-rm acme.sh
-cd .acme.sh
-bash acme.sh --register-account -m kimochilol@gmail.com
-bash acme.sh --issue --standalone -d $domain --force
-bash acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/2rray.key
+
+~/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 systemctl start v2ray
 systemctl start v2ray@none
 systemctl start v2ray@vless.service
 systemctl start v2ray@vnone.service
 systemctl start trojan
-systemctl start xray-mini@vless-splice
+systemctl start xray-mini@vless-direct
 systemctl start xray-mini@vless-splice
 echo Done
 sleep 0.5
 clear
 echo -e "${ORANGE}=============================================${NC}"
-echo -e "${BGBLUE} RECERT DOMAIN SELESAI                      ${NC}"
+echo -e "${BGBLUE} PERTUKARAN DOMAIN SELESAI                 ${NC}"
 echo -e "${ORANGE}=============================================${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
