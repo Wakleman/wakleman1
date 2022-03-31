@@ -226,7 +226,7 @@ echo -e "$PURPLE (•9) $NC $green MENU THEMES"$NC
 echo -e "$PURPLE (10) $NC $green REBOOT VPS"$NC
 echo -e "$PURPLE (11) $NC $green CHECK RUNNING SC"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$Lyellow Premium VPS by @anakjati567"$NC
+echo -e "$Lyellow Premium VPS by @Only1yoU"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
