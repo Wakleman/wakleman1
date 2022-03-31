@@ -185,7 +185,7 @@ echo -e "$RED ░░░██║░░░██║░░██║██║╚█
 echo -e "$RED ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░ $NC"
 echo -e "$green Premium Script$NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "${BGWHITE}                      SERVER INFORMATION                    ${NC}"
+echo -e "${BGWHITE}                      [ SERVER INFORMATION ]                ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$green VPS Type             :$typevps"$NC
 echo -e "$green CPU Model            :$cname"$NC
@@ -212,7 +212,7 @@ echo -e "$green Expired On           :$exp"$NC
 echo -e "$green Expired In           :$remain Days"$NC
 echo -e "$green Script Version       :$Sver"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "${BGWHITE}                        MAIN MENU                           ${NC}"
+echo -e "${BGWHITE}                        [ MAIN MENU ]                       ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
 echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP"$NC
