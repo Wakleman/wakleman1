@@ -7,6 +7,7 @@ white='\e[1;37m'
 green='\e[32m'
 RED='\033[0;31m'
 NC='\033[0m'
+BGWHITE='\e[0;47;30m'
 BGBLUE='\e[1;44m'
 ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
@@ -106,6 +107,20 @@ blue    "                  t.me/anakjati567     "
 exit 0
 fi
 clear
+# VPS Information
+Checkstart1=$(ip route | grep default | cut -d ' ' -f 3 | head -n 1);
+if [[ $Checkstart1 == "venet0" ]]; then
+    clear
+	  lan_net="venet0"
+    typevps="OpenVZ"
+    sleep 1
+else
+    clear
+		lan_net="eth0"
+    typevps="premium"
+    sleep 1
+fi
+clear
 # DNS Patch
 tipeos2=$(uname -m)
 # OS Uptime
@@ -139,7 +154,6 @@ WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 domain=$(cat /etc/v2ray/domain)
 Sver=$(cat /home/version)
-tele=$(cat /home/contact)
 banner=$(cat /var/lib/banner-name/banner)
 ASCII=$(cat /var/lib/banner-name/ASCII)
 username=$(cat /var/lib/banner-name/username)
@@ -171,8 +185,9 @@ echo -e "$RED ░░░██║░░░██║░░██║██║╚█
 echo -e "$RED ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░ $NC"
 echo -e "$green Premium Script$NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "${BGBLUE}                      SERVER INFORMATION                    ${NC}"
+echo -e "${BGWHITE}                      SERVER INFORMATION                    ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
+echo -e "$green VPS Type             :$typevps"$NC
 echo -e "$green CPU Model            :$cname"$NC
 echo -e "$green CPU Frequency        :$freq MHz"$NC
 echo -e "$green Number Of Cores      :$cores"$NC
@@ -197,7 +212,7 @@ echo -e "$green Expired On           :$exp"$NC
 echo -e "$green Expired In           :$remain Days"$NC
 echo -e "$green Script Version       :$Sver"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "${BGBLUE}                        MAIN MENU                           ${NC}"
+echo -e "${BGWHITE}                        MAIN MENU                           ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
 echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP"$NC
