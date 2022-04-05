@@ -215,7 +215,7 @@ echo -e "$PURPLE (•4) $NC $Lyellow PANEL SS & SSR $NC           $PURPLE (10) $
 echo -e "$PURPLE (•5) $NC $Lyellow PANEL XRAY CORE  $NC         $PURPLE (11) $NC $Lyellow CHECK RUNNING SC"$NC
 echo -e "$PURPLE (•6) $NC $Lyellow PANEL V2RAY CORE $NC         $PURPLE (12) $NC $Lyellow INFO ALL PORT"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$Lyellow Premium VPS by @anakjati567"$NC
+echo -e "$Lyellow Premium VPS by @Back_Door_Trick"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
