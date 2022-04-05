@@ -214,19 +214,14 @@ echo -e "$green Script Version       :$Sver"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGWHITE}                        [ MAIN MENU ]                       ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
-echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP"$NC
-echo -e "$PURPLE (•3) $NC $green PANEL WIREGUARDS"$NC
-echo -e "$PURPLE (•4) $NC $green PANEL SS & SSR "$NC
-echo -e "$PURPLE (•5) $NC $green PANEL XRAY CORE "$NC
-echo -e "$PURPLE (•6) $NC $green PANEL V2RAY CORE "$NC
-echo -e "$PURPLE (•7) $NC $green ALL TRIAL"$NC
-echo -e "$PURPLE (•8) $NC $green SYSTEM MENU"$NC
-echo -e "$PURPLE (•9) $NC $green MENU THEMES"$NC
-echo -e "$PURPLE (10) $NC $green REBOOT VPS"$NC
-echo -e "$PURPLE (11) $NC $green CHECK RUNNING SC"$NC
+echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN $NC      $PURPLE (•7) $NC $green ALL TRIAL"$NC
+echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP $NC   $PURPLE (•8) $NC $green SYSTEM MENU"$NC
+echo -e "$PURPLE (•3) $NC $green PANEL WIREGUARDS $NC         $PURPLE (•9) $NC $green MENU THEMES"$NC
+echo -e "$PURPLE (•4) $NC $green PANEL SS & SSR $NC           $PURPLE (10) $NC $green REBOOT VPS"$NC
+echo -e "$PURPLE (•5) $NC $green PANEL XRAY CORE  $NC         $PURPLE (11) $NC $green CHECK RUNNING SC"$NC
+echo -e "$PURPLE (•6) $NC $green PANEL V2RAY CORE $NC         $PURPLE (12) $NC $green INFO ALL PORT"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$Lyellow Premium VPS by @Jievpn"$NC
+echo -e "$Lyellow Premium VPS by @anakjati567"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
@@ -266,6 +261,9 @@ reboot
 ;;
 11)
 cekservice
+;;
+12)
+info
 ;;
 x)
 clear
