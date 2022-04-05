@@ -187,7 +187,7 @@ echo -e "$green Premium Script$NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGWHITE}                      [ SERVER INFORMATION ]                ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$green VPS Type             :$typevps"$NC
+echo -e "$green VPS Type             : $typevps"$NC
 echo -e "$green CPU Model            :$cname"$NC
 echo -e "$green CPU Frequency        :$freq MHz"$NC
 echo -e "$green Number Of Cores      : $cores"$NC
