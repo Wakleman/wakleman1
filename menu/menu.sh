@@ -195,12 +195,6 @@ echo -e "$green CPU Usage            :$cpu_usage"$NC
 echo -e "$green Operating System     :"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`$NC
 echo -e "$green Kernel               :`uname -r`"$NC
 echo -e "$green Bash Ver             :$versibash"$NC
-echo -e "$green Total Amount Of RAM  :$tram MB"$NC
-echo -e "$green Used RAM             :$uram MB"$NC
-echo -e "$green Free RAM             :$fram MB"$NC
-echo -e "$green System Uptime        :$uptime $DF( From VPS Booting )"$NC
-echo -e "$green Download             :$downloadsize GB ( From Startup / VPS Booting )"$NC
-echo -e "$green Upload               :$uploadsize GB ( From Startup / VPS Booting )"$NC
 echo -e "$green ISP NAME             :$ISP"$NC
 echo -e "$green IP VPS               :$IPVPS"$NC
 echo -e "$green DOMAIN               :$domain"$NC
