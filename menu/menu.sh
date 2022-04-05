@@ -190,36 +190,36 @@ echo -e "${Lred}═════════════════════�
 echo -e "$green VPS Type             :$typevps"$NC
 echo -e "$green CPU Model            :$cname"$NC
 echo -e "$green CPU Frequency        :$freq MHz"$NC
-echo -e "$green Number Of Cores      :$cores"$NC
-echo -e "$green CPU Usage            :$cpu_usage"$NC
-echo -e "$green Operating System     :"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`$NC
-echo -e "$green Kernel               :`uname -r`"$NC
-echo -e "$green Bash Ver             :$versibash"$NC
-echo -e "$green ISP NAME             :$ISP"$NC
-echo -e "$green IP VPS               :$IPVPS"$NC
-echo -e "$green DOMAIN               :$domain"$NC
-echo -e "$green City                 :$CITY"$NC
-echo -e "$green SERVER               :$ISP"$NC
-echo -e "$green Script Version       :$Sver"$NC
-echo -e "$green Client Name          :$name"$NC
-echo -e "$green Expired On           :$exp"$NC
-echo -e "$green Expired In           :$remain Days"$NC
-echo -e "$green Provided By          :$username $NC"
+echo -e "$green Number Of Cores      : $cores"$NC
+echo -e "$green CPU Usage            : $cpu_usage"$NC
+echo -e "$green Operating System     : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`$NC
+echo -e "$green Kernel               : `uname -r`"$NC
+echo -e "$green Bash Ver             : $versibash"$NC
+echo -e "$green ISP NAME             : $ISP"$NC
+echo -e "$green IP VPS               : $IPVPS"$NC
+echo -e "$green DOMAIN               : $domain"$NC
+echo -e "$green City                 : $CITY"$NC
+echo -e "$green SERVER               : $ISP"$NC
+echo -e "$green Script Version       : $Sver"$NC
+echo -e "$green Client Name          : $name"$NC
+echo -e "$green Expired On           : $exp"$NC
+echo -e "$green Expired In           : $remain Days"$NC
+echo -e "$green Provided By          : $username $NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGWHITE}                        [ MAIN MENU ]                       ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN $NC      $PURPLE (•7) $NC $green ALL TRIAL"$NC
-echo -e "$PURPLE (•2) $NC $green PANEL L2TP, PPTP, SSTP $NC   $PURPLE (•8) $NC $green SYSTEM MENU"$NC
-echo -e "$PURPLE (•3) $NC $green PANEL WIREGUARDS $NC         $PURPLE (•9) $NC $green MENU THEMES"$NC
-echo -e "$PURPLE (•4) $NC $green PANEL SS & SSR $NC           $PURPLE (10) $NC $green REBOOT VPS"$NC
-echo -e "$PURPLE (•5) $NC $green PANEL XRAY CORE  $NC         $PURPLE (11) $NC $green CHECK RUNNING SC"$NC
-echo -e "$PURPLE (•6) $NC $green PANEL V2RAY CORE $NC         $PURPLE (12) $NC $green INFO ALL PORT"$NC
+echo -e "$PURPLE (•1) $NC $Lyellow PANEL SSH & OPENVPN $NC      $PURPLE (•7) $NC $Lyellow ALL TRIAL"$NC
+echo -e "$PURPLE (•2) $NC $Lyellow PANEL L2TP, PPTP, SSTP $NC   $PURPLE (•8) $NC $Lyellow SYSTEM MENU"$NC
+echo -e "$PURPLE (•3) $NC $Lyellow PANEL WIREGUARDS $NC         $PURPLE (•9) $NC $Lyellow MENU THEMES"$NC
+echo -e "$PURPLE (•4) $NC $Lyellow PANEL SS & SSR $NC           $PURPLE (10) $NC $Lyellow REBOOT VPS"$NC
+echo -e "$PURPLE (•5) $NC $Lyellow PANEL XRAY CORE  $NC         $PURPLE (11) $NC $Lyellow CHECK RUNNING SC"$NC
+echo -e "$PURPLE (•6) $NC $Lyellow PANEL V2RAY CORE $NC         $PURPLE (12) $NC $Lyellow INFO ALL PORT"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$Lyellow Premium VPS by @anakjati567"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
-echo -e "$green[Ctrl + C] For exit from main menu"
+echo -e "$Lyellow[Ctrl + C] For exit from main menu"
 echo -e ""
 read -p "Select Menu Options [1-11 or x] : " menu
 case $menu in
