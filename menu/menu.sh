@@ -200,11 +200,11 @@ echo -e "$green IP VPS               :$IPVPS"$NC
 echo -e "$green DOMAIN               :$domain"$NC
 echo -e "$green City                 :$CITY"$NC
 echo -e "$green SERVER               :$ISP"$NC
-echo -e "$green Username             :$username $NC"
+echo -e "$green Script Version       :$Sver"$NC
 echo -e "$green Client Name          :$name"$NC
 echo -e "$green Expired On           :$exp"$NC
 echo -e "$green Expired In           :$remain Days"$NC
-echo -e "$green Script Version       :$Sver"$NC
+echo -e "$green Provided By          :$username $NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGWHITE}                        [ MAIN MENU ]                       ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
