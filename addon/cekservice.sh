@@ -324,7 +324,6 @@ elif [[ $wg_service == "exited" ]]; then
 else
    status_wg="${RED}Not Running ✖${NC}"
 fi
-clear
 echo -e "$BLUE=====================================${NC}"
 echo -e "| Service Status Installed In VPS   |" 
 echo -e "$BLUE=====================================${NC}" 
