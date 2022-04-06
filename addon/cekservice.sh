@@ -134,10 +134,21 @@ tipeos2=$(uname -m)
 # Getting Domain Name
 Domen="$(cat /etc/v2ray/domain)"
 # Echoing Result
+
+name=$(curl -sS https://raw.githubusercontent.com/wakleman/ip/main/access | grep $IPVPS | awk '{print $2}')
+exp=$(curl -sS https://raw.githubusercontent.com/wakleman/ip/main/access | grep $IPVPS | awk '{print $3}')
+modifyTime1=$(date +%s -d "${exp}")
+currentTime=$(date +%s)
+stampDiff=$(expr ${currentTime} - ${modifyTime1})
+days=$(expr ${stampDiff} / 86400)
+remainingDays=$(expr 90 - ${days})
+remain=${remainingDays}
+if [[ ${remainingDays} -le 0 ]]; then
+	remain="expired"
 echo -e ""
 echo -e "In Here Is Your VPS Information :"
 echo -e "SCRIPT VPS BY PAKYAVPN"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
 echo "Operating System Information :"
 echo -e "VPS Type    : $typevps"
 echo -e "OS Arch     : $tipeos2"
@@ -149,17 +160,17 @@ echo -e "OS BASE     : $basedong"
 echo -e "OS TYPE     : Linux / Unix"
 echo -e "Bash Ver    : $versibash"
 echo -e "Kernel Ver  : $kernelku"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
 echo "Hardware Information :"
 echo -e "Processor   : $tipeprosesor"
 echo -e "Proc Core   : $totalcore"
 echo -e "Virtual     : $typevps"
 echo -e "Cpu Usage   : $cpu_usage"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
 echo "System Status / System Information :"
 echo -e "Uptime      : $uptime ( From VPS Booting )"
 echo -e "Total RAM   : ${totalram}MB"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
 echo "Internet Service Provider Information :"
 echo -e "Public IP   : $MYIP"
 echo -e "Domain      : $Domen"
@@ -168,14 +179,19 @@ echo -e "Region      : $REGION "
 echo -e "Country     : $COUNTRY"
 echo -e "City        : $CITY "
 echo -e "Time Zone   : $WAKTUE"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
 echo "Time & Date & Location & Coordinate Information :"
 echo -e "Location    : $COUNTRY"
 echo -e "Coordinate  : $koordinat"
 echo -e "Time Zone   : $WAKTUE"
 echo -e "Date        : $harini"
 echo -e "Time        : $jam ( WIB )"
-echo "-------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
+echo "STATUS SCRIPT :"
+echo -e "Client Name : $name"
+echo -e "Expired On  : $exp"
+echo -e "Expired In  : $remain Days"
+echo "-----------------------------------------------------------------------------"
 echo -e ""
 
 if [[ $fail2ban_service == "running" ]]; then
@@ -369,7 +385,7 @@ Fail2Ban    = $status_fail2ban
 Webmin      = $status_webmin
 Nginx       = $status_nginx
 "
-echo -e "$blue-----------------------------------------------------------{NC}"
+echo -e "-----------------------------------------------------------"
 echo -e ""
 echo -e "${green}JIKA TERDAPAT NOT RUNNING, PLEASE REPORT TO ADMIN FOR FIX$NC"
 echo -e "${green}Report to PAKYAVPN @anakjati567"
