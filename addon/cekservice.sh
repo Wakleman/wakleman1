@@ -324,12 +324,10 @@ elif [[ $wg_service == "exited" ]]; then
 else
    status_wg="${RED}Not Running ✖${NC}"
 fi
-clear
 echo -e "$BLUE=====================================${NC}"
 echo -e "| Service Status Installed In VPS   |" 
 echo -e "$BLUE=====================================${NC}" 
 echo -e "
-
 STATUS SSH & OPEN VPN:
 "$BLUE-----------------${NC}" 
 SSH         = $status_ssh
@@ -371,7 +369,7 @@ Fail2Ban    = $status_fail2ban
 Webmin      = $status_webmin
 Nginx       = $status_nginx
 "
-echo -e "$blue-----------------------------------------------------------${NC}" 
+echo -e "$blue-----------------------------------------------------------{NC}"
 echo -e ""
 echo -e "${green}JIKA TERDAPAT NOT RUNNING, PLEASE REPORT TO ADMIN FOR FIX$NC"
 echo -e "${green}Report to PAKYAVPN @anakjati567"
