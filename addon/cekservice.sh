@@ -1,8 +1,44 @@
 #!/bin/bash
-red="\e[1;31m"
-green="\e[0;32m"
-NC="\e[0m"
+Lred='\e[1;91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
+white='\e[1;37m'
+green='\e[32m'
+RED='\033[0;31m'
+NC='\033[0m'
+BGWHITE='\e[0;47;30m'
+BGBLUE='\e[1;44m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0;37m'
 clear
+#servicesshow
+fail2ban_service=$(/etc/init.d/fail2ban status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+dropbear_service=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+stunnel4_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+squid_service=$(/etc/init.d/squid status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+v2ray_service=$(systemctl status v2ray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+v2rayn_service=$(systemctl status v2ray@none | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless_service=$(systemctl status v2ray@vless | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vlessn_service=$(systemctl status v2ray@vnone | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_service=$(systemctl status trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xray_service=$(systemctl status xtls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohp_service=$(systemctl status ssh-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+openvpn_service=$(systemctl status openvpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+webmin_service=$(netstat -ntlp | grep 10000 | awk '{print $7}' | cut -d'/' -f2)
+wg_service=$(systemctl status wg-quick@wg0 | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xvtls=$(systemctl status xr-vm-tls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xvntls=$(systemctl status xr-vm-ntls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xvlt=$(systemctl status xr-vl-tls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xvln=$(systemctl status xr-vl-ntls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vmgrpc=$(systemctl status vmess-grpc | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vlgrpc=$(systemctl status vless-grpc | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trgrpc=$(systemctl status trojan-grpc | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xtr=$(systemctl status x-tr | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 # VPS Information
 Checkstart1=$(ip route | grep default | cut -d ' ' -f 3 | head -n 1);
 if [[ $Checkstart1 == "venet0" ]]; then 
@@ -140,7 +176,7 @@ echo -e "Time Zone   : $WAKTUE"
 echo -e "Date        : $harini"
 echo -e "Time        : $jam ( WIB )"
 echo "-------------------------------------------------------------------------------"
-echo -e ""
+
 if [[ $fail2ban_service == "running" ]]; then
    status_fail2ban="${GREEN}Running ✔ ${NC}"
 else
