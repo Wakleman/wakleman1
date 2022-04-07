@@ -54,15 +54,15 @@ echo -e "$RED         ██╔═══╝░██╔══██║██╔�
 echo -e "$RED         ██║░░░░░██║░░██║██║░╚██╗░░░██║░░░██║░░██║ $NC"
 echo -e "$RED         ╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝ $NC"
 echo "                                                              "
-echo -e "$BLUE                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
+echo -e "$green                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo ' .......................................................... ' | lolcat
-echo -e "$BLUE                  Autoscript By PAKYAVPN"$NC
-echo -e "$BLUE                   NEW FULL VERSION 2022 "$NC
-echo -e "$BLUE                    CONTACT TELEGRAM"$NC
-echo -e "$BLUE                       @anakjati567"$NC
+echo -e "$green                  Autoscript By PAKYAVPN"$NC
+echo -e "$green                   NEW FULL VERSION 2022 "$NC
+echo -e "$green                    CONTACT TELEGRAM"$NC
+echo -e "$green                       @anakjati567"$NC
 echo '...........................................................' | lolcat
 echo ''
-echo -e "$BLUE                       Tunggu 5 Saat!"$NC
+echo -e "$green                       Tunggu 5 Saat!"$NC
 echo ' .......................................................... ' | lolcat
 sleep 5
 clear
