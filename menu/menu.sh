@@ -204,7 +204,7 @@ echo -e "$green Script Version       : $Sver"$NC
 echo -e "$green Client Name          : $name"$NC
 echo -e "$green Expired On           : $exp"$NC
 echo -e "$green Expired In           : $remain Days"$NC
-echo -e "$green Provided By          : $username $NC"
+echo -e "$green Provided By          : @$name"$NC"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGWHITE}                        [ MAIN MENU ]                       ${NC}"
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
@@ -215,7 +215,7 @@ echo -e "$PURPLE (•4) $NC $Lyellow PANEL SS & SSR $NC           $PURPLE (10) $
 echo -e "$PURPLE (•5) $NC $Lyellow PANEL XRAY CORE  $NC         $PURPLE (11) $NC $Lyellow CHECK RUNNING SC"$NC
 echo -e "$PURPLE (•6) $NC $Lyellow PANEL V2RAY CORE $NC         $PURPLE (12) $NC $Lyellow INFO ALL PORT"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
-echo -e "$Lyellow Premium VPS by $username"$NC
+echo -e "$Lyellow Premium VPS by @$name"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
